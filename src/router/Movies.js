@@ -28,7 +28,7 @@ Movies.post('/insert', async (req, res) => {
   if (movies) {
     return res.status(200).json(movies);
   }
-  return res.sendStatus(404).json;
+  return res.status(404).json('error of insert data');
 });
 
 Movies.put('/update/:id', async (req, res) => {
@@ -50,7 +50,7 @@ Movies.put('/update/:id', async (req, res) => {
   if (movies) {
     return res.status(200).json(movies);
   }
-  return res.sendStatus(404);
+  return res.status(404).json('error for update data');
 });
 
 Movies.delete('/delete/:id', async (req, res) => {
@@ -60,7 +60,7 @@ Movies.delete('/delete/:id', async (req, res) => {
   if (movies) {
     return res.status(200).json(movies);
   }
-  return res.sendStatus(404);
+  return res.status(404).json('not found id');
 });
 
 export default Movies;
