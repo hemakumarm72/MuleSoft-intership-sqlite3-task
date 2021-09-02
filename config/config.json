@@ -1,0 +1,16 @@
+
+{
+  "development": {
+    "username": "null",
+    "password": null,
+    "database": "node-film-app",
+    "dialect": "sqlite",
+    "storage": "./db.sqlite",
+    "define": {
+      "underscored": true,
+      "freezeTableName": true
+    }
+  
+  }
+  
+}
