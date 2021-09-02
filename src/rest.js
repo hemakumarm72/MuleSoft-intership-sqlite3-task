@@ -11,6 +11,9 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(cors());
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+  res.status(200).json('welcome web api');
+});
 app.use('/user', userRouter);
 app.use('/films', filmRouter);
 app.use('/profile', profileRouter);

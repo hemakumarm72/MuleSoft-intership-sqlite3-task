@@ -4,6 +4,12 @@ GET http://localhost:8000/movies/
 
 
 ###
+GET http://localhost:8000/
+
+
+
+
+###
 
 POST http://localhost:8000/movies/insert/
 content-type: application/json
