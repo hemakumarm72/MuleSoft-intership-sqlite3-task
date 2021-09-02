@@ -13,39 +13,33 @@ Movies.get('/:id', async (req, res) => {
   if (movies) {
     return res.status(200).json(movies);
   }
-  return res.sendStatus(404);
+  return res.sendStatus(404).json;
 });
 
 Movies.post('/insert', async (req, res) => {
   const movies = await db.movies.create({
-    username: req.body.username,
-    email: req.body.email,
-    gender: req.body.gender,
-    age: req.body.age,
-    address: req.body.address,
-    education: req.body.education,
-    mobileno: req.body.mobileno,
-    linkedin: req.body.linkedin,
-    description: req.body.description,
+    Name: req.body.Name,
+    Actor: req.body.Actor,
+    Actress: req.body.Actress,
+    YearOfRelease: req.body.YearOfRelease,
+    Directorname: req.body.Directorname,
+    Description: req.body.Description,
   });
   if (movies) {
     return res.status(200).json(movies);
   }
-  return res.sendStatus(404);
+  return res.sendStatus(404).json;
 });
 
-Movies.put('/:id', async (req, res) => {
+Movies.put('/update/:id', async (req, res) => {
   const movies = await db.movies.update(
     {
-      username: req.body.username,
-      email: req.body.email,
-      gender: req.body.gender,
-      age: req.body.age,
-      address: req.body.address,
-      education: req.body.education,
-      mobileno: req.body.mobileno,
-      linkedin: req.body.linkedin,
-      description: req.body.description,
+      Name: req.body.Name,
+      Actor: req.body.Actor,
+      Actress: req.body.Actress,
+      YearOfRelease: req.body.YearOfRelease,
+      Directorname: req.body.Directorname,
+      Description: req.body.Description,
     },
     {
       where: {
@@ -59,7 +53,7 @@ Movies.put('/:id', async (req, res) => {
   return res.sendStatus(404);
 });
 
-Movies.delete('delete/:id', async (req, res) => {
+Movies.delete('/delete/:id', async (req, res) => {
   const movies = await db.movies.destroy({
     where: { id: req.params.id },
   });

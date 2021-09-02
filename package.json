@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/rest.js",
-    "migration": "node_modules/.bin/sequelize db:migrate ",
+    "migration": "./node_modules/.bin/sequelize db:migrate",
     "start:rest": "nodemon --exec babel-node src/rest.js",
     "start:graphql": "nodemon --exec babel-node src/graphql.js",
     "test": "nodemon --exec ./node_modules/.bin/mocha --require  esm test/test.js",
-    "seeding": "node_modules/.bin/sequelize db:seed:all --debug"
+    "seeding": "./node_modules/.bin/sequelize db:seed:all --debug"
   },
   "author": "",
   "license": "ISC",

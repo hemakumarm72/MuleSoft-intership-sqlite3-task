@@ -1,0 +1,42 @@
+GET http://localhost:8000/movies/
+
+
+
+
+###
+
+POST http://localhost:8000/movies/insert/
+content-type: application/json
+
+{
+   "Name" : "ajefdh",
+    "Actor": "JAMES BOND",
+    "Actress": "rOOSES",
+    "YearOfRelease": 2018,
+    "Directorname": "GELLites",
+    "Description": "environment"
+}
+
+###
+
+PUT  http://localhost:8000/movies/update/6910ae80-0be5-11ec-a0a0-555aa1549a80
+content-type: application/json
+
+{
+   "Name" : "ajefdh",
+    "Actor": "JAMES BOND",
+    "Actress": "rOOSES",
+    "YearOfRelease": 2018,
+    "Directorname": "GELLites",
+    "Description": "environment"
+}
+
+################################
+
+DELETE  http://localhost:8000/movies/delete/6910ae80-0be5-11ec-a0a0-555aa1549a80
+content-type: application/json
+
+{
+   
+}
+

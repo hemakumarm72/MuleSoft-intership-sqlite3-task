@@ -10,7 +10,7 @@ export default (Sequelize, DataTypes) => {
       Name: DataTypes.STRING,
       Actor: DataTypes.STRING,
       Actress: DataTypes.STRING,
-      YearOfRelease: DataTypes.STRING,
+      YearOfRelease: DataTypes.INTEGER,
       Directorname: DataTypes.STRING,
       Description: DataTypes.TEXT,
     },
