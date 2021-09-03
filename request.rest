@@ -42,7 +42,36 @@ content-type: application/json
 DELETE  http://localhost:8000/movies/delete/6910ae80-0be5-11ec-a0a0-555aa1549a80
 content-type: application/json
 
+
+
+
+################################
+POST http://localhost:8000/login 
+content-type: application/json
+
 {
    
 }
 
+################################
+GET http://localhost:8000/user/
+
+
+#################
+
+POST http://localhost:8000/user/register/
+content-type: application/json
+
+{
+   "email": "hemakumarm72@gmail.com",
+   "password": "hemakumarm72"
+}
+
+################################ 
+POST http://localhost:8000/user/login
+content-type: application/json
+
+{
+    "email": "hemakumarm72@gmail.com",
+    "password": "hemakumarm72"
+}

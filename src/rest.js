@@ -20,6 +20,8 @@ app.use('/profile', profileRouter);
 app.use('/movies', Movies);
 if (process.env.NODE_ENV !== 'test') {
   db.sequelize.sync().then(() => {
-    app.listen(port, () => console.log(`Running on http://localhost:${port}`));
+    app.listen(port, () =>
+      console.log('\x1b[32m', `🚀 Running on http://localhost:${port}`)
+    );
   });
 }
